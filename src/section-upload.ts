@@ -30,20 +30,21 @@ export function concatenate(resultConstructor, arrays) {
   }
   return result;
 }
-download2.onclick = () => {
-  axios({
-    url,
+window.download2.onclick = () => {
+  window.axios({
+    url: '',
     method: "head",
   }).then((res) => {
     // 获取长度来进行分割块
     console.time("并发下载");
+    let m = 10;
     const size = Number(res.headers["content-length"]);
-    const length = parseInt(size / m);
+    const length = size / m;
     const arr = [];
     for (let i = 0; i < length; i++) {
       let start = i * m;
       let end = i == length - 1 ? size - 1 : (i + 1) * m - 1;
-      arr.push(downloadRange(url, start, end, i));
+      arr.push(downloadRange('', start, end, i));
     }
     Promise.all(arr).then((res) => {
       const arrBufferList = res
@@ -56,7 +57,7 @@ download2.onclick = () => {
       aTag.download = "360_0388.jpg";
       aTag.href = blobUrl;
       aTag.click();
-      URL.revokeObjectURL(blob);
+      URL.revokeObjectURL(blobUrl);
       console.timeEnd("并发下载");
     });
   });

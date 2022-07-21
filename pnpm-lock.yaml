@@ -3,10 +3,14 @@ lockfileVersion: 5.4
 specifiers:
   rollup: ^2.77.0
   rollup-plugin-typescript2: ^0.32.1
+  tslib: ^2.4.0
+  typescript: ^4.7.4
 
 devDependencies:
   rollup: 2.77.0
-  rollup-plugin-typescript2: 0.32.1_rollup@2.77.0
+  rollup-plugin-typescript2: 0.32.1_55kiftncucr43pz4hskma6yi2q
+  tslib: 2.4.0
+  typescript: 4.7.4
 
 packages:
 
@@ -152,7 +156,7 @@ packages:
       supports-preserve-symlinks-flag: 1.0.0
     dev: true
 
-  /rollup-plugin-typescript2/0.32.1_rollup@2.77.0:
+  /rollup-plugin-typescript2/0.32.1_55kiftncucr43pz4hskma6yi2q:
     resolution: {integrity: sha512-RanO8bp1WbeMv0bVlgcbsFNCn+Y3rX7wF97SQLDxf0fMLsg0B/QFF005t4AsGUcDgF3aKJHoqt4JF2xVaABeKw==}
     peerDependencies:
       rollup: '>=1.26.3'
@@ -164,6 +168,7 @@ packages:
       resolve: 1.22.1
       rollup: 2.77.0
       tslib: 2.4.0
+      typescript: 4.7.4
     dev: true
 
   /rollup/2.77.0:
@@ -186,6 +191,12 @@ packages:
 
   /tslib/2.4.0:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
+    dev: true
+
+  /typescript/4.7.4:
+    resolution: {integrity: sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: true
 
   /universalify/2.0.0:

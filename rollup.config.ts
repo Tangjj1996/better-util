@@ -4,7 +4,7 @@ import tyepscript from 'rollup-plugin-typescript2'
 export default defineConfig([{
     input: './src/index.ts',
     output: {
-        file: 'bundle.js',
+        file: 'dist/bundle.js',
         format: "cjs",
     },
     plugins: [tyepscript()]
