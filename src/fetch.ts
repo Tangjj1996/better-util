@@ -1,4 +1,4 @@
-const fetchWithTimeout = (input, init, timeout = 10_100) => {
+export const fetchWithTimeout = (input, init, timeout = 10_100) => {
     const controller = new AbortController();
     setTimeout(() => {
        controller.abort(); 
@@ -7,13 +7,13 @@ const fetchWithTimeout = (input, init, timeout = 10_100) => {
     return fetch(input, { signal: controller.signal, ...init });
 }
 
-const wait = (timeout) => {
+export const wait = (timeout) => {
     new Promise((resolve) => {
         setTimeout(resolve, timeout);
     });
 }
 
-const fetchWithRetry = async (input, init, timeout = 10_000, retries = 3) => {
+export const fetchWithRetry = async (input, init, timeout = 10_000, retries = 3) => {
     let increasingTimeout = 2;
     let count = retries;
 
