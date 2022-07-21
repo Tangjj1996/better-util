@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "module": "ES6",
+        "lib": ["DOM", "ES6"],
+        "target": "ES5",
+        "baseUrl": ".",
+        "paths": {}
+    },
+    "include": ["src/*"]
+}
