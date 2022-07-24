@@ -15,7 +15,7 @@
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
-  "list-staged": {
+  "lint-staged": {
     "*.{ts}": [
       "prettier --write",
       "git add"

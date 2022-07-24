@@ -5,9 +5,7 @@ export const fetchWithTimeout = (input, init, timeout = 10_100) => {
   }, timeout);
 
   return fetch(input, { signal: controller.signal, ...init });
-};
-
-export const wait = (timeout) => {
+};export const wait = (timeout) => {
   new Promise((resolve) => {
     setTimeout(resolve, timeout);
   });
