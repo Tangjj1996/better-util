@@ -2,17 +2,38 @@
   "name": "better-util",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "rollup -c --configPlugin typescript"
+    "bundle": "gulp bundle",
+    "pkg": "gulp pkg",
+    "prepare": "husky install"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "utils fc",
+    "lodash"
+  ],
+  "author": "@Tangjj1996",
   "license": "ISC",
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "list-staged": {
+    "*.{ts}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "devDependencies": {
+    "@types/gulp": "^4.0.9",
+    "@types/node": "^18.0.6",
+    "gulp": "^4.0.2",
+    "gulp-execa": "^4.1.0",
+    "gulp-typescript": "6.0.0-alpha.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
     "rollup": "^2.77.0",
     "rollup-plugin-typescript2": "^0.32.1",
     "tslib": "^2.4.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "yorkie": "^2.0.0"
   }
 }
