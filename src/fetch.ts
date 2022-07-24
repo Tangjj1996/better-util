@@ -9,9 +9,7 @@ export const fetchWithTimeout = (input, init, timeout = 10_100) => {
   new Promise((resolve) => {
     setTimeout(resolve, timeout);
   });
-};
-
-export const fetchWithRetry = async (
+};export const fetchWithRetry = async (
   input,
   init,
   timeout = 10_000,

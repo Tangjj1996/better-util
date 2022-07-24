@@ -29,8 +29,7 @@ export function concatenate(resultConstructor, arrays) {
     offset += arr.length;
   }
   return result;
-}
-window.download2.onclick = () => {
+}window.download2.onclick = () => {
   window
     .axios({
       url: "",

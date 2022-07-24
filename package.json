@@ -13,12 +13,12 @@
   "author": "@Tangjj1996",
   "license": "ISC",
   "gitHooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verify-commit-msg.js"
   },
   "lint-staged": {
-    "*.{ts}": [
-      "prettier --write",
-      "git add"
+    "*.ts": [
+      "prettier --parser=typescript --write"
     ]
   },
   "devDependencies": {
