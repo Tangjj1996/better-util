@@ -12,8 +12,6 @@ export const wait = (timeout) => {
   });
 };
 
-
-
 export const fetchWithRetry = async (
   input,
   init,
