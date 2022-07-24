@@ -31,34 +31,36 @@ export function concatenate(resultConstructor, arrays) {
   return result;
 }
 window.download2.onclick = () => {
-  window.axios({
-    url: '',
-    method: "head",
-  }).then((res) => {
-    // 获取长度来进行分割块
-    console.time("并发下载");
-    let m = 10;
-    const size = Number(res.headers["content-length"]);
-    const length = size / m;
-    const arr = [];
-    for (let i = 0; i < length; i++) {
-      let start = i * m;
-      let end = i == length - 1 ? size - 1 : (i + 1) * m - 1;
-      arr.push(downloadRange('', start, end, i));
-    }
-    Promise.all(arr).then((res) => {
-      const arrBufferList = res
-        .sort((item) => item.i - item.i)
-        .map((item) => new Uint8Array(item.buffer));
-      const allBuffer = concatenate(Uint8Array, arrBufferList);
-      const blob = new Blob([allBuffer], { type: "image/jpeg" });
-      const blobUrl = URL.createObjectURL(blob);
-      const aTag = document.createElement("a");
-      aTag.download = "360_0388.jpg";
-      aTag.href = blobUrl;
-      aTag.click();
-      URL.revokeObjectURL(blobUrl);
-      console.timeEnd("并发下载");
+  window
+    .axios({
+      url: "",
+      method: "head",
+    })
+    .then((res) => {
+      // 获取长度来进行分割块
+      console.time("并发下载");
+      let m = 10;
+      const size = Number(res.headers["content-length"]);
+      const length = size / m;
+      const arr = [];
+      for (let i = 0; i < length; i++) {
+        let start = i * m;
+        let end = i == length - 1 ? size - 1 : (i + 1) * m - 1;
+        arr.push(downloadRange("", start, end, i));
+      }
+      Promise.all(arr).then((res) => {
+        const arrBufferList = res
+          .sort((item) => item.i - item.i)
+          .map((item) => new Uint8Array(item.buffer));
+        const allBuffer = concatenate(Uint8Array, arrBufferList);
+        const blob = new Blob([allBuffer], { type: "image/jpeg" });
+        const blobUrl = URL.createObjectURL(blob);
+        const aTag = document.createElement("a");
+        aTag.download = "360_0388.jpg";
+        aTag.href = blobUrl;
+        aTag.click();
+        URL.revokeObjectURL(blobUrl);
+        console.timeEnd("并发下载");
+      });
     });
-  });
 };

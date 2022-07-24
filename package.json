@@ -4,8 +4,7 @@
   "description": "",
   "scripts": {
     "bundle": "gulp bundle",
-    "pkg": "gulp pkg",
-    "prepare": "husky install"
+    "pkg": "gulp pkg"
   },
   "keywords": [
     "utils fc",
