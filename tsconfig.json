@@ -1,13 +1,13 @@
 {
     "compilerOptions": {
-        "module": "CommonJS",
+        "module": "Node16",
         "target": "ES5",
         "skipLibCheck": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
-        "moduleResolution": "node",
+        "moduleResolution": "Node16",
         "baseUrl": ".",
-        "paths": {}
+        "paths": {},
     },
-    "include": ["**/*.ts"],
+    "include": ["**/*.ts", "gulpfile.ts"],
 }
