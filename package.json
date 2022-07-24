@@ -13,8 +13,7 @@
   "author": "@Tangjj1996",
   "license": "ISC",
   "gitHooks": {
-    "pre-commit": "lint-staged",
-    "commit-msg": "node scripts/verify-commit-msg.js"
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.ts": [
@@ -33,6 +32,6 @@
     "rollup-plugin-typescript2": "^0.32.1",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4",
-    "yorkie": "^2.0.0"
+    "tailuo": "^0.0.2"
   }
 }

@@ -10,9 +10,9 @@ specifiers:
   prettier: ^2.7.1
   rollup: ^2.77.0
   rollup-plugin-typescript2: ^0.32.1
+  tailuo: ^0.0.2
   tslib: ^2.4.0
   typescript: ^4.7.4
-  yorkie: ^2.0.0
 
 devDependencies:
   '@types/gulp': 4.0.9
@@ -24,9 +24,9 @@ devDependencies:
   prettier: 2.7.1
   rollup: 2.77.0
   rollup-plugin-typescript2: 0.32.1_55kiftncucr43pz4hskma6yi2q
+  tailuo: 0.0.2
   tslib: 2.4.0
   typescript: 4.7.4
-  yorkie: 2.0.0
 
 packages:
 
@@ -2884,6 +2884,17 @@ packages:
       es6-symbol: 3.1.3
     dev: true
 
+  /tailuo/0.0.2:
+    resolution: {integrity: sha512-0jl9oofGGvs6azLdJ+XUVgx9xw00J8IT2DiAqkAnB9xo3750d6va5sne3/M9qqfPxJbz3oQnTnl6KdKN2ju0hA==}
+    engines: {node: '>=4'}
+    requiresBuild: true
+    dependencies:
+      execa: 0.8.0
+      is-ci: 1.2.1
+      normalize-path: 1.0.0
+      strip-indent: 2.0.0
+    dev: true
+
   /through/2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
     dev: true
@@ -3226,15 +3237,4 @@ packages:
       which-module: 1.0.0
       y18n: 3.2.2
       yargs-parser: 5.0.1
-    dev: true
-
-  /yorkie/2.0.0:
-    resolution: {integrity: sha512-jcKpkthap6x63MB4TxwCyuIGkV0oYP/YRyuQU5UO0Yz/E/ZAu+653/uov+phdmO54n6BcvFRyyt0RRrWdN2mpw==}
-    engines: {node: '>=4'}
-    requiresBuild: true
-    dependencies:
-      execa: 0.8.0
-      is-ci: 1.2.1
-      normalize-path: 1.0.0
-      strip-indent: 2.0.0
     dev: true
